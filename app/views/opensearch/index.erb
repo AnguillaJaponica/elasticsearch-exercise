@@ -1,0 +1,13 @@
+<h1>OpenSearch Health Check</h1>
+
+<section>
+  <h2>Health</h2>
+  <div><%= @health %><div>
+</section>
+
+<section>
+  <h2>Indices</h2>
+  <code>
+    <%= @indices.to_json %>
+  </code>
+</section>
