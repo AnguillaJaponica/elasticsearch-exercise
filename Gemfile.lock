@@ -90,6 +90,11 @@ GEM
     drb (2.1.1)
       ruby2_keywords
     erubi (1.12.0)
+    faraday (2.7.11)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -116,6 +121,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
+    multi_json (1.15.0)
     mutex_m (0.1.2)
     net-imap (0.4.1)
       date
@@ -133,6 +139,9 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
+    opensearch-ruby (3.0.1)
+      faraday (>= 1.0, < 3)
+      multi_json (>= 1.0)
     psych (5.1.0)
       stringio
     puma (6.4.0)
@@ -215,6 +224,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  arm64-darwin-21
   arm64-darwin-22
   x86_64-linux
 
@@ -223,6 +233,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  opensearch-ruby
   puma (>= 5.0)
   rails (~> 7.1.0)
   sprockets-rails
