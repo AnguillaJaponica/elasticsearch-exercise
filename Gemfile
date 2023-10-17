@@ -63,3 +63,4 @@ group :development do
 
 end
 
+gem "mysql2"

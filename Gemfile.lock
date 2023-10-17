@@ -123,6 +123,7 @@ GEM
     msgpack (1.7.2)
     multi_json (1.15.0)
     mutex_m (0.1.2)
+    mysql2 (0.5.5)
     net-imap (0.4.1)
       date
       net-protocol
@@ -234,6 +235,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   opensearch-ruby
+  mysql2
   puma (>= 5.0)
   rails (~> 7.1.0)
   sprockets-rails
