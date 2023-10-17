@@ -64,3 +64,4 @@ group :development do
 end
 
 gem "mysql2"
+gem "slim-rails"

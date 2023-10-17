@@ -1,0 +1,24 @@
+h1 商品一覧
+
+table
+  thead
+    tr
+      th 商品名
+      th リンク
+      th 平均評価
+      th 価格
+      th カテゴリ
+
+  tbody
+    - @products.each do |product|
+      tr
+        td
+          = product.name
+        td
+          = link_to 'リンク', product.link, target: '_blank'
+        td
+          = product.average_rating
+        td
+          = product.price
+        td
+          = product.category
