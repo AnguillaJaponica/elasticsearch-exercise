@@ -1,5 +1,15 @@
 h1 商品一覧
 
+= form_with method: :get do |f|
+  = f.text_field :query, value: @query
+  = f.submit 'Search'
+
+- if @response
+  section
+    header Response:
+    code[style="white-space: pre;"]
+      = JSON.pretty_generate(@response)
+
 table
   thead
     tr
