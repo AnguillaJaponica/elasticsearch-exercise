@@ -5,8 +5,8 @@ h1 商品一覧
   = f.submit 'Search'
 
 - if @response
-  section
-    header Response:
+  details
+    summary OpenSearch Response
     code[style="white-space: pre;"]
       = JSON.pretty_generate(@response)
 
