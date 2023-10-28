@@ -16,6 +16,9 @@ class Product < ApplicationRecord
                 "kuromoji_readingform", # 漢字に読み仮名を付与
                 "custom_synonym_filter",
               ],
+              char_filter: [
+                "icu_normalizer" # 大文字小文字、全角半角を正規化
+              ]
             }
           },
           filter: {
