@@ -4,9 +4,15 @@ h1 商品一覧
   = f.text_field :query, value: @query
   = f.submit 'Search'
 
+- if @tokens
+  details
+    summary Analyze
+    code[style="white-space: pre;"]
+      = JSON.pretty_generate(@tokens)
+
 - if @response
   details
-    summary OpenSearch Response
+    summary Search
     code[style="white-space: pre;"]
       = JSON.pretty_generate(@response)
 
