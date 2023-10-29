@@ -9,6 +9,7 @@ services:
     environment:
       discovery.type: single-node
       plugins.security.disabled: true # 認証とSSLを無効化
+    command: bash -c "bin/opensearch-plugin install analysis-kuromoji; bin/opensearch-plugin install analysis-icu; ./opensearch-docker-entrypoint.sh"
 
 volumes:
   opensearch-data:
