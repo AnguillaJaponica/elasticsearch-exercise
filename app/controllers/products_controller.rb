@@ -6,6 +6,16 @@ class ProductsController < ApplicationController
     return if @query.blank?
 
     client = OpenSearch::Client.new(host: 'localhost:9200')
+
+    # 形態素解析の結果
+    @tokens = client.indices.analyze(
+      index: Product::INDEX_NAME,
+      body: {
+        text: @query
+      }
+    )
+
+    # 検索結果
     @response = client.search(
       index: Product::INDEX_NAME,
       body: {
