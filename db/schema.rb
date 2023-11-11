@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_17_103105) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_11_034904) do
   create_table "products", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "link", default: "", null: false
     t.float "average_rating", default: 0.0, null: false
     t.integer "price", default: 0, null: false
     t.string "category", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "synonyms", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "words", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
