@@ -24,7 +24,7 @@ class Product < ApplicationRecord
           filter: {
             custom_synonym_filter: {
               type: "synonym",
-              synonyms: [] # TOOD: 類義語を設定できるようにする
+              synonyms: Synonym.pluck(:words)
             }
           }
         }

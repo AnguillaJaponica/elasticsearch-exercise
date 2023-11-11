@@ -1,0 +1,18 @@
+h1 Synonyms
+
+p
+  a[href="https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html#analysis-synonym-define-synonyms" target="_blank"] Format
+= form_with model: Synonym.new do |f|
+  = f.text_field :words, required: true, size: 40, placeholder: 'ipod, i-pod, i pod'
+  = f.submit
+
+table
+  thead
+  tbody
+    - @synonyms.each do |synonym|
+      tr
+        td = synonym.id
+        td = synonym.words
+        td
+          = form_with model: synonym, method: :delete do |f|
+            = f.submit 'Delete'
